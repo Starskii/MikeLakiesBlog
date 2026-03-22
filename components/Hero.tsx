@@ -6,7 +6,9 @@ export default function Hero() {
   return (
     <section className="hero">
       <PageTitle>{siteMetadata.heroTitle}</PageTitle>
-      <p className="mt-4 prose max-w-none text-gray-500 dark:text-gray-400">{siteMetadata.description}</p>
+      <p className="prose mt-4 max-w-none text-gray-500 dark:text-gray-400">
+        {siteMetadata.description}
+      </p>
     </section>
   )
 }

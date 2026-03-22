@@ -78,11 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         sizes="32x32"
         href={`${basePath}/static/favicons/favicon-32x32.png`}
       />
-      <link
-        rel="icon"
-        type="image/svg+xml"
-        href={`${basePath}/static/favicons/logo.svg`}
-      />
+      <link rel="icon" type="image/svg+xml" href={`${basePath}/static/favicons/logo.svg`} />
       <link
         rel="icon"
         type="image/png"
