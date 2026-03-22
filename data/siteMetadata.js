@@ -3,6 +3,7 @@ const siteMetadata = {
   title: 'MikeLakies.com',
   author: 'Mike Lakies',
   headerTitle: 'MikeLakies.com',
+  heroTitle: "Hello",
   description: 'Have I reached the party to whom I am speaking?',
   language: 'en-us',
   theme: 'system', // system, dark or light

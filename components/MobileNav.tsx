@@ -8,6 +8,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const navRef = useRef(null)
 
   const onToggleNav = () => {
@@ -23,6 +24,7 @@ const MobileNav = () => {
   }
 
   useEffect(() => {
+    setMounted(true)
     return clearAllBodyScrollLocks
   })
 
@@ -42,7 +44,8 @@ const MobileNav = () => {
           />
         </svg>
       </button>
-      <Transition appear show={navShow} as={Fragment} unmount={false}>
+      {mounted && (
+        <Transition appear show={navShow} as={Fragment} unmount={false}>
         <Dialog as="div" onClose={onToggleNav} unmount={false}>
           <TransitionChild
             as={Fragment}
@@ -100,7 +103,8 @@ const MobileNav = () => {
             </DialogPanel>
           </TransitionChild>
         </Dialog>
-      </Transition>
+        </Transition>
+      )}
     </>
   )
 }
